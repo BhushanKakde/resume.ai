@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(120deg, #410404, #240b36);
+}
+
+.icon {
+  width: 120px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon img:hover {
+  transform: rotate(360deg);
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.navbar a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: aqua;
+}
+
+.explore-button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+  background-color: #ff4500;
+  transform: scale(1.1);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  padding: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-top-right-radius: 50px;
+}
+
+.heading {
+  color: #00e676;
+  font-size: 42px;
+  text-shadow: 0px 0px 10px #00e676;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.explore-cvmap-button {
+  background-color: #00e676;
+  color: black;
+  padding: 15px 25px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px;
+  width: 250px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.explore-cvmap-button:hover {
+  background-color: #000000;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+  color: #00e676;
+}
+
+.prediction, .generation {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  padding: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin: 50px 0;
+}
+
+.prediction-heading, .generation-heading {
+  color: #00e676;
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 5px #00e676;
+}
+
+.prediction-text, .generation-text {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.prediction-button, .generation-button {
+  background-color: #00e676;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  width: 250px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.prediction-button:hover, .generation-button:hover {
+  background-color: #000000;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+  color: #00e676;
+}
+
+.prediction-image, .generation-image {
+  max-width: 50%;
+  padding-left: 20px;
+}
+
+.prediction-image img, .generation-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+.contact-content {
+  text-align: center;
+  color: white;
+}
+
+.contact-heading {
+  font-size: 2.5em;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-size: 1.2em;
+}
+
+.container {
+  background-color: #000;
+  padding: 50px 0;
+  border-top: 5px solid #00e676;
+}
+
+.resumeimage {
+  height: 400px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    top: 5px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .explore-cvmap-button {
+    width: 100%;
+  }
+
+  .prediction, .generation {
+    flex-direction: column;
+  }
+
+  .prediction-image, .generation-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
